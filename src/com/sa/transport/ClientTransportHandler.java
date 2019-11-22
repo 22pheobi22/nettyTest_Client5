@@ -15,8 +15,8 @@ import io.netty.channel.ChannelPromise;
 public class ClientTransportHandler extends ChannelInboundHandlerAdapter {
 	private int index = 0;
 	//private String roomId = "roomId";
-	private String roomId = "22422,";
-
+	private String roomId = "22421,22422,22423,";
+	
 	public ClientTransportHandler(){ }
 	
 	public ClientTransportHandler(String roomId, int index){
@@ -28,17 +28,17 @@ public class ClientTransportHandler extends ChannelInboundHandlerAdapter {
 	public void channelActive(ChannelHandlerContext ctx) {
 		Integer transactionId = (int) (1 + Math.random()*100000000);
 		//String fromUserId = roomId + "-" + index + "-" + System.currentTimeMillis() + "-" + transactionId;
-		String fromUserId = "147082";
+		String fromUserId = "T111";
 
 		ServerLogin serverLogin = new ServerLogin(transactionId, roomId, fromUserId, "", 0);
 		TreeMap<Integer, Object> options = new TreeMap<>(); // 消息记录集
 		options.put(1, fromUserId);
 		//options.put(2, "STUDENT");
-		options.put(2, "3");
+		options.put(2, "2");
 		options.put(3, fromUserId);
 		options.put(4, "icon");
 		//options.put(5, "agoraId");
-		options.put(5, "20147082");
+		options.put(5, "10111");
 		serverLogin.setOptions(options);
 		
 		BaseDataPool.USER_ROOM_MAP.put(fromUserId, roomId);
