@@ -236,6 +236,7 @@ public class StartClient {
 			ServerRequestcApplyAuth serverRequestcApplyAuth = new ServerRequestcApplyAuth();
 			serverRequestcApplyAuth.setFromUserId("T111");
 			serverRequestcApplyAuth.setRoomId("22421,22422,22423,");
+			serverRequestcApplyAuth.setToUserId("147081");
 			serverRequestcApplyAuth.setTransactionId(15724);
 			serverRequestcApplyAuth.setStatus(0);
 			TreeMap<Integer,Object> applyAuthMap = new TreeMap<>();
@@ -248,6 +249,7 @@ public class StartClient {
 			ServerRequestcAgreeApplyAuth serverRequestcAgreeApplyAuth = new ServerRequestcAgreeApplyAuth();
 			serverRequestcAgreeApplyAuth.setFromUserId("T111");
 			serverRequestcAgreeApplyAuth.setRoomId("22421,22422,22423,");
+			serverRequestcAgreeApplyAuth.setToUserId("147081");
 			serverRequestcAgreeApplyAuth.setTransactionId(15724);
 			serverRequestcAgreeApplyAuth.setStatus(0);
 			TreeMap<Integer,Object> agreeApplyAuthMap = new TreeMap<>();
