@@ -33,7 +33,7 @@ import com.sa.service.server.ServerRequestcRoomRemove;
 import com.sa.service.server.ServerRequestcShareRemove;
 import com.sa.transport.ChatClient;
 import com.sa.transport.ClientConfigs;
-public class StartClient {
+/*public class StartClient {
 	private static int count = 50;
 	private static List<String> roomIds = Arrays.asList(
 			"房间50","房间51","房间52","房间53","房间54","房间55","房间56","房间57","房间58","房间59",
@@ -79,7 +79,7 @@ public class StartClient {
 		
 		case "1"://登录
 				try {
-					Thread.sleep(83000);
+					Thread.sleep(30000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -90,7 +90,7 @@ public class StartClient {
 			break;
 		case "10": // 更新共享
 			try {
-				Thread.sleep(38000);
+				Thread.sleep(30000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -132,8 +132,8 @@ public class StartClient {
 
 		//System.exit(0);
 	}
-}
-/*public class StartClient {
+}*/
+public class StartClient {
 	private static int count = 1;
 	private static List<String> roomIds = Arrays.asList("房间A", "房间B", "房间C"
 			,"房间D", "房间E", "房间F"
@@ -177,13 +177,13 @@ public class StartClient {
 			"0.退出测试;"
 	);
 
-	public static void startChatClient() {
+	/*public static void startChatClient() {
 		for (int i=0; i<count; i++) {
 			String roomId = roomIds.get(i%roomIds.size());
 
 			new Thread(new ChatClient(ClientConfigs.REMOTE_SERVER_IP, ClientConfigs.REMOTE_SERVER_PORT, roomId, i+1)).start();
 		}
-	}
+	}*/
 
 	public static void menu() throws Exception {
 		Scanner scan = new Scanner(System.in);
@@ -569,7 +569,7 @@ public class StartClient {
 			
 		}
 	}
-	*//** CASE 3 一对多【全房间】*//*
+	/** CASE 3 一对多【全房间】*/
 	private static void serverRequestbRoom(Scanner scanner) {
 		System.out.println("请输入消息 : ");
 		String content = scanner.nextLine();
@@ -591,4 +591,3 @@ public class StartClient {
 		System.exit(0);
 	}
 }
-*/
